@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>⚗️ STEAMING STEM 🧑🏻‍💻</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    <link rel="icon" href="assets/favicon/favicon.ico" />
+    <link rel="stylesheet" href="./src/main.css" />
+
+    <!-- FAVICON -->
+
+  <link
+    rel="android-chrome-192x192.png"
+    sizes="192x192"
+    href="../assets/favicon/android-chrome-192x192.png"
+  />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+  </head>
+  <body style="min-height: 100vh;">
+    <header>
+      <div class="container-fluid">
+        <div class="col">
+          <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button
+                class="navbar-toggler"
+                id="togglebtn"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" href="#"
+                    >Home <span class="sr-only">(current)</span></a
+                  >
+                  <a class="nav-link" href="#">Features</a>
+                  <a class="nav-link" href="#">Pricing</a>
+                  <a class="nav-link disabled">Disabled</a>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="row">
+            <button
+              onclick="document.getElementById('form-modal').style.display='block'"
+              style="width: auto"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="modal-form">
+      <div id="form-modal" class="modal">
+        <div class="container">
+          <span
+            onclick="document.getElementById('form-modal').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >×</span
+          >
+
+          <!-- FORM SIGN IN -->
+          <form class="form" id="sheetdb-form-signin">
+            <h1 class="form__title">Login</h1>
+            <div class="form__message form__message--error" id="result"></div>
+            <div class="form__input-group">
+              <input
+                type="text"
+                class="form__input"
+                autofocus
+                placeholder="Username"
+                id="username"
+              />
+              <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+              <input
+                type="password"
+                class="form__input"
+                placeholder="Password"
+                id="password"
+              />
+              <div class="form__input-error-message"></div>
+            </div>
+            <button class="form__button" type="submit">Continue</button>
+            <p class="form__text">
+              <a href="#" class="form__link"
+                >Forgot your password? Please contact us and we will help you</a
+              >
+            </p>
+            <p class="form__text">
+              <a class="form__link" href="./" id="linkCreateAccount"
+                >Don't have an account? Create account</a
+              >
+            </p>
+          </form>
+
+          <!-- FORM SIGN UP -->
+
+          <form
+            action="https://sheetdb.io/api/v1/vork6otnlryk0"
+            method="post"
+            id="sheetdb-form-signup"
+            class="form--hidden"
+          >
+            <h1 class="form__title">Create Account</h1>
+            <div class="form__message form__message--error"></div>
+            <div class="form__input-group">
+              <input
+                type="text"
+                id="signupUsername"
+                class="form__input"
+                placeholder="Username"
+                name="data[uname]"
+                required
+
+              />
+              <div class="form__input-error-message"></div>
+            </div>
+
+            <div class="form__input-group">
+              <input
+                id="email"
+                type="email"
+                class="form__input"
+                placeholder="Email Address"
+                name="data[email]"
+                required
+                onkeyup="validate_email()"
+
+              />
+              <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+              <input
+                id="pass"
+                type="password"
+                class="form__input"
+                placeholder="Password"
+                name="data[psw]"
+                required
+
+              />
+              <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+              <input
+                id="confirm_pass"
+                type="password"
+                class="form__input"
+                placeholder="Confirm password"
+                name="data[psw repeat]"
+                required
+                onkeyup="validate_password()"
+
+              />
+              <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+              <p><b>User Type :</b></p>
+              <input
+                id="confirm_psw"
+                type="radio"
+                id="student"
+                name="data[usertype]"
+                checked
+                value="student"
+              />
+                <label for="student">Student</label>
+
+              <input
+                type="radio"
+                id="parent"
+                name="data[usertype]"
+                value="parent"
+              />
+                <label for="parent">Parent</label>
+
+              <input
+                type="radio"
+                id="teacher"
+                name="data[usertype]"
+                value="teacher"
+              />
+                <label for="teacher">Teacher</label>
+            </div>
+            <button class="form__button" id="sub_button" type="submit">
+              Continue
+            </button>
+            <p class="form__text">
+              <a class="form__link" href="./" id="linkLogin"
+                >Already have an account? Sign in</a
+              >
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <section>
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-around align-items-center">
+          <img
+            src="src/istockphoto-476882328-612x612-removebg-preview.png"
+            alt="img"
+            width="400"
+            height="400"
+          />
+          <h1 class="p-2">STEAMING STEM</h1>
+        </div>
+        <div class="row" style="height: 2em"></div>
+        <div class="row">
+          <h2>What is STEM?</h2>
+          <p class="text">
+            STEM is an acronym that stands for science, technology, engineering,
+            and math. STEM subjects develop creators, thinkers, problem solvers,
+            doers, innovators, and inventors. Exposing kids to simple STEM
+            activities at an early age today sets a foundation for higher
+            learning tomorrow. STEM skills have many real-world applications and
+            many fantastic STEM careers to explore. Find out what makes for a
+            good STEM activity and how to set up STEM projects easily for kids
+            of all ages.
+          </p>
+        </div>
+        <div class="row">
+          <h3>What Is STEM For Kids?</h3>
+          <p class="text">
+            Over the years, my son and I have greatly enjoyed building our
+            science knowledge with more than 100 fantastic STEM activities and
+            counting. We have explored so many areas, including engineering,
+            coding, physical science, chemistry, biology, geology and more. Our
+            STEM activities have become some of our favorite projects of all
+            time! Read on to learn more about STEM education, STEM careers, and
+            starting a STEM program with young children at home or in the
+            classroom.
+          </p>
+        </div>
+        <div class="row">
+          <h3>What does STEM stand for?</h3>
+          <p class="text">
+            STEM is an acronym for science, technology, engineering, and math.
+            STEM stands for hands-on learning that applies to the world around
+            us. STEM activities build and teach creativity, problem-solving,
+            life skills, ingenuity, resourcefulness, patience, and curiosity.
+            STEM is what will shape the future as our world grows and changes.
+          </p>
+        </div>
+      </div>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"
+      ></script>
+      <script src="./src/main.js"></script>
+<!-- 
+      <script>
+        let userN = "";
+        sessionStorage.setItem("userN", 
+        $('#username').val())
+      </script> -->
+
+      <script>
+        var modal = document.getElementById("form-modal");
+
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        };
+      </script>
+    </section>
+
+    <footer>
+FOOTEREEEEE
+    </footer>
+  </body>
+</html>
