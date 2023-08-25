@@ -1,3 +1,4 @@
+
 // Form message when there is an error
 
 function setFormMessage(formElement, type, message) {
@@ -54,11 +55,11 @@ async function checkUser() {
       const utype = userExists.usertype;
       // open the html in the same window according to the type of user else will give a message
       if (utype === "teacher") {
-        window.open("templates/t.html", "_self");
+        window.open("templates/teacher.html", "_self");
       } else if (utype === "student") {
-        window.open("templates/s.html", "_self");
+        window.open("templates/student.html", "_self");
       } else if (utype === "parent") {
-        window.open("templates/p.html", "_self");
+        window.open("templates/parent.html", "_self");
       }
     } else {
       resultElement.textContent = "";
@@ -91,6 +92,18 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     loginForm.classList.remove("form--hidden");
     createAccountForm.classList.add("form--hidden");
+  });
+
+  document.querySelector("#btnLogIn").addEventListener("click", (e) => {
+    e.preventDefault();
+    loginForm.classList.remove("form--hidden");
+    createAccountForm.classList.add("form--hidden");
+  });
+
+  document.querySelector("#btnSignUp").addEventListener("click", (e) => {
+    e.preventDefault();
+    loginForm.classList.add("form--hidden");
+    createAccountForm.classList.remove("form--hidden");
   });
 
   loginForm.addEventListener("submit", (e) => {
@@ -189,7 +202,7 @@ function validate_password() {
         //     response => response.json()
         // )
         .then((html) => {
-          window.open("templates/d.html", "_self");
+          window.open("templates/welcome.html", "_self");
         });
     });
   }

@@ -1,15 +1,17 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: rgb(63, 251, 236);
-  background: radial-gradient(
+  background: rgba(0, 221, 250, 0.18);
+  /* background: radial-gradient(
     circle,
     rgba(63, 251, 236, 1) 0%,
-    rgba(6, 38, 97, 1) 100%
-  );
-  color: 2ed2c8;
+    rgba(6, 38, 97, 1) 100% */
+  /* ); */
+  color: #00418c;
 }
 
 /*  */
@@ -52,11 +54,14 @@ hr {
 
 /* Set a style for all buttons */
 button {
-  background-color: #04aa6d;
+  background-color: var(--color-primary-dark);
   color: white;
+  font-size: 1 rem;
+  font-weight: bold;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
@@ -273,7 +278,6 @@ nav {
 
 /* https://codepen.io/nishanc/pen/NWWPdZE CUSTOMISE ALERT*/
 
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 /* ---------------Animation---------------- */
 
@@ -491,17 +495,29 @@ nav {
 .transpar {
   background-color: transparent!important;
   width: 80%;
-  margin-left: 0px;
-  margin-left: auto;
+  margin-left: 10%;
+  
 }
 
 
-/* d Page */
+/* Welcome Page */
 
 
 @media screen and (min-width: 400px) {
 
 #d-welcome {
   margin-top: 10%;
+}
+}
+
+
+/* contactUs Page */
+
+
+@media screen and (min-width: 700px) {
+
+#contactUsForm {
+  width: 80%;
+  margin-left: 10%;
 }
 }

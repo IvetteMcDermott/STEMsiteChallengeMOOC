@@ -40,17 +40,67 @@
   />
   <link rel="manifest" href="../assets/favicon/site.webmanifest" />
 
-  <title>⚗️ STEAMING STEM 🧑🏻‍💻</title>
+  <title>⚗️ Contact Us - STEAMING STEM 🧑🏻‍💻</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="../src/email.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("TW6XGbONCCJf4lBdX");
+   })();
+</script>
+
 
 
 </head>
 <body>
-  <h2>contact us</h2>
-  
-  <h2 id="userlog"></h2>
+  <header>
+          <div class="container-fluid">
+        <div class="col">
+          <div class="row">
+<div class="col-2">
+  <img
+  src="../src/istockphoto-476882328-612x612-removebg-preview.png"
+  alt="img"
+  width="80"
+  height="80"
+  onclick="window.open('../index.html', '_self')"
+>
+</div>
+
+          </div>
+
+        </div>
+      </div>
+      </header>
   
 
-<script src="../src/user.js"></script>
+  <section class="container-fluid">
+    <div class="row  " id="contactUsForm">
+        <div class="col ">
+
+            <h5 class="uppercase text-center mt-4 mb-4">
+                Send us a mail!
+            </h5>
+            <div >
+                <form onsubmit="return sendMail(this);">
+                    <input type="text" name="name" class="form-control" autofocus id="fullname" placeholder="Name" required/>
+                    <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
+                    <textarea rows="5" name="inquiry" class="form-control" id="inquiry" placeholder="Tell us how can we help you" required></textarea>
+                    <button type="submit" class="center-block" >Send Your Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+  
+
 
 </body>
 </html>
