@@ -2,55 +2,190 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-    crossorigin="anonymous"
-  />
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
   <link rel="icon" href="../assets/favicon/favicon.ico" />
   <link rel="stylesheet" href="../src/main.css" />
-
   <!-- FAVICON -->
-
-  <link
-    rel="android-chrome-192x192.png"
-    sizes="192x192"
-    href="../assets/favicon/android-chrome-192x192.png"
-  />
-
-  <link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="../assets/favicon/apple-touch-icon.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="../assets/favicon/favicon-32x32.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="../assets/favicon/favicon-16x16.png"
-  />
+  <link rel="android-chrome-192x192.png" sizes="192x192" href="../assets/favicon/android-chrome-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png" />
   <link rel="manifest" href="../assets/favicon/site.webmanifest" />
-
   <title>⚗️ STEAMING STEM 🧑🏻‍💻</title>
-
-
 </head>
-<body>
-  <h2>signed up student</h2>
-  
-  <h2 id="userlog"></h2>
-  
+<body style="min-height: 100vh;">
+  <header>
+    <div class="container-fluid ">
+      <div class="row ">
+        <div class="col-4">
+          <img src="../src/istockphoto-476882328-612x612-removebg-preview.png" alt="img" width="80" height="80" onclick="window.open('../index.html', '_self')">
+          <h4>Steaming STEM</h4>
+        </div>
+        <div class="col-8 d-flex flex-wrap justify-content-end align-items-center">
+          <h4>Student : </h4>
+          <h4 id="userlog"></h4>
+          <img src="../src/icons8-user-50.png" width="50" height="50" alt="user-icon" />
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container-fluid p-5">
+    <div class="row"></div>
+    <div class="row" style="height: 2em"></div>
+    <div class="row ">
+      <h3>Hey there, curious minds!</h3>
+      <p class="text"> Have you ever wondered how things work? STEM is like a magical doorway to understanding the world around us. Science lets us explore everything from tiny bugs to gigantic planets. We can ask questions like, 'Why is the sky blue?' and then figure out the answers through cool experiments. Technology is like playing with super smart toys. It helps us create amazing apps, games, and even robots! Ever seen a robot dance? It's all thanks to technology. Engineering is like being a super inventor. Remember building a fort with your building blocks? Engineers design and build things like bridges and spaceships. You could be a builder of the future! Mathematics is like a secret code that helps us solve puzzles. From counting candies to exploring outer space, math is the key. It's like your brain's superpower! So, if you love exploring, inventing, and solving mysteries, STEM is your playground. Who knows, you might be the one to invent flying cars or explore new planets! The fun is just beginning on this awesome adventure called STEM." </p>
+    </div>
+    <div class="row d-flex justify-content-center mt-5 mb-5">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/7TtAoNilQ8s?si=0NjBptaBz9qUwxyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div style="margin-bottom: 6em;">
+      <p>Here are some examples for you...</p>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+        <div class="col mb-4">
+          <div class="card">
+            <a href="https://www.sciencebuddies.org/stem-activities/invisible-ink" target="_blank">
+              <img src="../src/paint-turmeric-solution.jpg" class="card-img-top" width="200px;" height="200px;" alt="invisible-ink">
+            </a>
+          </div>
+          <div class="card-body">
+            <details>
+              <summary>
+                <h5>Invisible Ink...</h5>
+              </summary> Have you ever wanted to send your friend a secret message that no-one else can read? Then you might know of invisible ink—a special type of ink that you can use for writing and that does not show up on paper. Only after a special treatment will it appear again magically, and the message can be read. How does this work? Find out in this activity and write your own secret messages! Click in the image...
+            </details>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <a href="https://www.sciencebuddies.org/stem-activities/milk-into-plastic" target="_blank">
+              <img src="../src/materials-casein-milk-plastic.jpg" class="card-img-top" width="200px;" height="200px;" alt="milk to plastic">
+            </a>
+          </div>
+          <div class="col">
+            <details>
+              <summary>
+                <h5>Turn milk into plastic...</h5>
+              </summary> Have you ever heard that plastic can be made out of milk? If this sounds like something made-up to you, you may be surprised to learn that from the early 1900s until about 1945, milk was commonly used to make many different plastic ornaments, including buttons, decorative buckles, beads and other jewelry, fountain pens, the backings for hand-held mirrors, and fancy comb and brush sets. Milk plastic (usually called casein plastic) was even used to make jewelry for Queen Mary of England! In this activity you will make your own casein plastic out of hot milk and vinegar. Click in the image...
+            </details>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <a href="https://www.sciencebuddies.org/stem-activities/make-lemon-volcano" target="_blank">
+              <img src="../src/lemon-volcano-2.jpg" class="card-img-top" width="200px;" height="200px;" alt="lemon volcano">
+            </a>
+          </div>
+          <div class="col">
+            <details>
+              <summary>
+                <h5>Lemon Volcano...</h5>
+              </summary> Make a colorful erupting volcano in your kitchen with lemons and baking soda! When you added the baking soda, it started to fizzle and foam a little bit. When you mixed the baking soda into the lemon with a knife, it should have started foaming a lot more, bubbling up and over the sides of the lemon. Eventually the reaction slowed down and stopped. See the Digging Deeper section to learn about the chemical reaction that creates the foam! Click in the image...
+            </details>
+          </div>
+        </div>
+      </div>
+      <p>These are few places where you can find more information, remember always ask to your parents about visiting sites</p>
+      <div>
+        STEM for Kids
+https://www.computerscience.org/resources/stem-for-kids/
+ 
+How Stuff Works
+A source for clear, reliable explanations of how everything around us actually works.
+http://www.howstuffworks.com/
 
-<script src="../src/user.js"></script>
+Brain POP™
+Educational animated movies for K-12 created to help explain concepts and to demystify math, science, health, technology, and English topics in an entertaining way for both children and adults.
+http://www.brainpop.com/
 
+Kids Design Network
+Investigate a challenge, dream up a design, and draw your plans on the computer. Then, using the Internet, you can show your design to a real engineer! Best of all it’s free!
+http://www.dupagechildrensmuseum.org/kdn/index.html
+
+NASA
+Enter the NASA portal to explore the many facets of NASA. Learn the latest in space news; find math, science, and technology activities for home or the classroom; shoot a cannonball into orbit; or design your own mission to Mars. It’s all just a few clicks away.
+http://www.nasa.gov
+
+The NASA SCI Files™
+Come explore the tree house and help the tree house detectives solve their latest problem. Conduct experiments from Dr. D’s lab, play the online Problem-Based Learning (PBL) game, or just check out the research rack, expert’s corner, or media room. This is a great site for parents, educators, and students in grades 3-5.
+http://scifiles.larc.nasa.gov
+
+Society of Women Engineers (SWE)
+An organization representing women in engineering and technical fields.
+http://www.societyofwomenengineers.org
+
+Association for Women in Science (AWIS)
+An organization dedicated to achieving equity and full participation for women in science, mathematics, engineering and technology.
+http://www.awis.org
+
+Association for Women in Mathematics (AWM)
+A nonprofit organization dedicated to encouraging women and girls in the mathematical sciences. AWM also offers a mentoring program.
+http://www.awm-math.org
+
+The JASON Project
+Connects students with scientists and researchers in real- and near-real time, virtually and physically, to provide mentored, authentic and enriching science learning experiences. JASON and its partners create these connections using multiple platforms and technologies, including award-winning, standards-based classroom curriculum developed with NOAA, NASA, National Geographic Society and others; after-school and out-of-school activities; camp experiences; and exploration programs for museums, aquariums, libraries and community centers. The result is a year-round continuum of classroom and out-of-classroom learning.
+http://www.jason.org/public/whatis/start.aspx
+
+What Engineers Do
+Discover what engineers do, what the job is like, and even how much they are paid.
+http://www.bls.gov/k12/text/mat_001t.htm
+
+Discover Engineering™
+As you dig into this site, you will discover a wealth of information on engineering and careers. There are also some really "cool stuff" and games.
+http://www.discoverengineering.org/
+
+The National Inventors Hall of Fame
+Celebrate the creative and entrepreneurial spirit of great inventors showcased on this web site through exhibits and presentations.
+http://www.invent.org/index.asp
+
+The Tech Museum of Innovation
+A hands-on technology museum devoted to inspiring the innovator in everyone.
+http://www.thetech.org/
+
+Exploratorium
+With over 12,000 web pages exploring hundreds of different topics, the Exploratorium is a collage of over 650 science, art, and human perception exhibits.
+http://www.exploratorium.edu/index.html
+
+Imagiverse
+Imagiverse.... the universe of our imaginations has no boundaries. Imagiverse believes that imagination is the key to learning. Teachers can teach, but learning comes from within. The web site's goal is to spark the flame that will lead young and old to pursue learning as an adventure through imagination. Activities, resources, and lots of information are available for all to see and use.
+http://www.imagiverse.org
+
+The Library of Congress
+More than a library. . .an on-line collection of the words, pictures, and sounds of our country in a library that never closes.
+http://www.loc.gov
+      </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <script src="../src/main.js"></script>
+  <script>
+    var modal = document.getElementById("form-modal");
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+  </section>
+  <footer class="d-flex justify-content-between align-content-center;" style="margin-top: 20px; padding: 10px; background-color: #00654e; position: fixed; width: 100%; left: 0px; bottom:0px; ">
+    <p style="color: white;
+      font-weight: bold;">@Educational Purposes Only</p>
+    <a href="https://github.com/IvetteMcDermott" style="text-decoration: none !important;">
+      <img src="../src/icons8-github-48.png" width="20px;" height="20px;" alt="github" />
+      <span style="
+            
+            color: white;
+                        font-weight: bold;
+          ">Ivette Mc Dermott </span>
+    </a>
+    <a href="templates/contact_us.html" style="
+          text-decoration: none !important;
+          color: white;          font-weight: bold;
+        ">Contact Us <span>
+        <img src="../src/icons8-mail-50.png" width="20px;" height="20px;" alt="" />
+      </span>
+    </a>
+  </footer>
+  <script src="../src/user.js"></script>
 </body>
 </html>

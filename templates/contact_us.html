@@ -1,106 +1,175 @@
 <!DOCTYPE html>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-    crossorigin="anonymous"
-  />
+    <!--META SEO -->
 
-  <link rel="icon" href="../assets/favicon/favicon.ico" />
-  <link rel="stylesheet" href="../src/main.css" />
+    <meta property="og:title" content="Steaming STEM" />
+    <meta
+      property="og:description"
+      content="Site that collects lists of resources for STEM learning, being student, parent or teacher."
+    />
+    <meta
+      property="og:url"
+      content="https://ivettemcdermott.github.io/STEMsiteChallengeMOOC/"
+    />
+    <meta property="og:site_name" content="Steaming STEM" />
+    <meta
+      name="description"
+      content="stem, stem resources for teachers, stem resources "
+    />
+    <meta name="author" content="Ivette McDermott" />
 
-  <!-- FAVICON -->
+    <title>⚗️ STEAMING STEM 🧑🏻‍💻</title>
 
-  <link
-    rel="android-chrome-192x192.png"
-    sizes="192x192"
-    href="../assets/favicon/android-chrome-192x192.png"
-  />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
 
-  <link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="../assets/favicon/apple-touch-icon.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="../assets/favicon/favicon-32x32.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="../assets/favicon/favicon-16x16.png"
-  />
-  <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="../src/main.css" />
 
-  <title>⚗️ Contact Us - STEAMING STEM 🧑🏻‍💻</title>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- FAVICON -->
 
-    <script src="../src/email.js"></script>
+    <link rel="icon" href="../assets/favicon/favicon.ico" />
 
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("TW6XGbONCCJf4lBdX");
-   })();
-</script>
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="../assets/favicon/android-chrome-192x192.png"
+    />
 
+    <link
+      rel="icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+  </head>
 
-
-</head>
-<body>
-  <header>
-          <div class="container-fluid">
+  <body style="min-height: 100vh;">
+    <header>
+      <div class="container-fluid pt-2">
         <div class="col">
           <div class="row">
-<div class="col-2">
-  <img
-  src="../src/istockphoto-476882328-612x612-removebg-preview.png"
-  alt="img"
-  width="80"
-  height="80"
-  onclick="window.open('../index.html', '_self')"
->
-</div>
+            <div class="col-4">
+              <img
+              src="../src/istockphoto-476882328-612x612-removebg-preview.png"
+              alt="img"
+              width="80"
+              height="80"
+              onclick="window.open('../index.html', '_self')"
+            >
+            <h4>Steaming STEM</h4>
+            </div>  
 
+            <div class="col-8 d-flex justify-content-end ">
+              <h4 id="userlog"></h4>
+
+              <img
+                src="../src/icons8-user-50.png"
+                class="pt-3"
+                width="50"
+                height="50"
+                alt="user-icon"
+              >
+            </div>
           </div>
 
         </div>
       </div>
-      </header>
-  
+    </header>
 
-  <section class="container-fluid">
-    <div class="row  " id="contactUsForm">
-        <div class="col ">
-
-            <h5 class="uppercase text-center mt-4 mb-4">
-                Send us a mail!
-            </h5>
-            <div >
-                <form onsubmit="return sendMail(this);">
-                    <input type="text" name="name" class="form-control" autofocus id="fullname" placeholder="Name" required/>
-                    <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
-                    <textarea rows="5" name="inquiry" class="form-control" id="inquiry" placeholder="Tell us how can we help you" required></textarea>
-                    <button type="submit" class="center-block" >Send Your Inquiry</button>
-                </form>
-            </div>
+    <section class="container-fluid">
+      <div class="row mt-4" id="contactUsForm">
+        <div class="col">
+          <h5 class="uppercase text-center mt-4 mb-4">Send us a mail!</h5>
+          <div>
+            <form onsubmit="return sendMail(this);">
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                autofocus
+                id="fullname"
+                placeholder="Name"
+                required
+              />
+              <input
+                type="text"
+                name="emailaddress"
+                class="form-control"
+                id="emailaddress"
+                placeholder="Email"
+                required
+              />
+              <textarea
+                rows="5"
+                name="inquiry"
+                class="form-control"
+                id="inquiry"
+                placeholder="Tell us how can we help you"
+                required
+              ></textarea>
+              <button type="submit" class="center-block">
+                Send Your Inquiry
+              </button>
+            </form>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-</section>
-
-  
-
-
-</body>
+    <footer
+      class="d-flex justify-content-between align-content-center footer-styled"
+    >
+      <p style="color: white; font-weight: bold">@Educational Purposes Only</p>
+      <a
+        href="https://github.com/IvetteMcDermott"
+        style="text-decoration: none !important"
+      >
+        <img
+          src="../src/icons8-github-48.png"
+          width="20"
+          height="20"
+          alt="github"
+        />
+        <span style="color: white; font-weight: bold">Ivette McDermott </span>
+      </a>
+      <a
+        href="templates/contact_us.html"
+        style="
+          text-decoration: none !important;
+          color: white;
+          font-weight: bold;
+        "
+        >Contact Us
+        <span>
+          <img
+            src="../src/icons8-mail-50.png"
+            width="20"
+            height="20"
+            alt="mail"
+          />
+        </span>
+      </a>
+    </footer>
+    <script src="../src/user.js"></script>
+  </body>
 </html>
