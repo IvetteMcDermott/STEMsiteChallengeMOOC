@@ -9,7 +9,7 @@
 #navbar {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 #togglebtn {
@@ -279,13 +279,13 @@ body {
 /* Font navbar */
 nav {
   background: transparent;
-  border-top: 1px #00654e solid;
+  border-top: 1px #00654e solid ;
   border-bottom: 1px #00654e solid;
 }
 .nav-styled {
   font-size: 18px;
   font-weight: bold;
-  color:#252c6a!important;
+  color:#00418c!important;
   text-decoration: none!important;
   transition: all .2s ease-in-out;
 }
